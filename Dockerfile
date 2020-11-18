@@ -16,6 +16,11 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
+RUN	apt-get update && apt-get install -y \
+    htop \
+    aria2 \
+    nmap \
+    traceroute
 # 3) install packages
 RUN pip install --no-cache-dir scipy
 

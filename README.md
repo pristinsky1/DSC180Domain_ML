@@ -1,6 +1,6 @@
 # DSC180Domain_ML
 
-# Edit: Work in Progress
+# Edit: Work in Progress (Commands below currently won't all work.)
 
 ## Allowing Reproduction Instructions
 

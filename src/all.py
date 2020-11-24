@@ -65,7 +65,7 @@ def input_feature_label():
     Dir2_ByteCount_1200to1500_feature = []
     labels = []
     file_names = []
-    filepath = "data"
+    filepath = "input_data"
     files = os.listdir(filepath)
     for file in files:
         if ('novpn' in file) or (file[:2] == '._'):

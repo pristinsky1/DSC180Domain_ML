@@ -11,6 +11,8 @@ Open terminal, run these commands in the associated order:
 
 2.) **launch-180.sh -G  B05_VPN_XRAY -i apristin99/dsc180domain_ml**
 
+3.) Delete input_dataset and add your own. Otherwise, leave as as is and use the provided input_dataset.
+
 3.) **python run.py result**
 
 These instructions are provided to run the entire repository. To see my analysis, look within the notebooks folder and click on analysis.ipynb.

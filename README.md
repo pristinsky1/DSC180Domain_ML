@@ -1,6 +1,6 @@
 # DSC180Domain_ML
 
-# Edit: Work in Progress (Commands below currently won't all work.)
+# Edit: Work in Progress
 
 ## Allowing Reproduction Instructions
 
@@ -9,7 +9,7 @@ Open terminal, run these commands in the associated order:
 
 1.) **ssh user@dsmlp-login.ucsd.edu** (user refers to your school username). Enter credentials.
 
-2.) **launch-180.sh -i apristin99/dsc180domain_ml**
+2.) **launch-180.sh -G  B05_VPN_XRAY -i apristin99/dsc180domain_ml**
 
 3.) **python run.py**
 

@@ -3,6 +3,7 @@ import os
 import json
 sys.path.insert(0, 'src')
 from features import features_labels
+from features import ml_model_train
 
 def main(targets):
     '''
@@ -22,7 +23,17 @@ def main(targets):
             print(file_labels)
             print("Created the new features!")
             print(new_df)
-    return new_df
+    return
+
+    if 'result' in targets:
+        with open('config/test-params.json') as test_params:
+            feature_cfg = json.load(test_params)
+            
+            
+            # make the data target
+            file_names, file_labels, new_df = features_labels(**feature_cfg)
+            print(new_df)
+    return
 
 if __name__=='__main__':
     #run via:

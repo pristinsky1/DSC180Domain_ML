@@ -24,7 +24,6 @@ def main(targets):
         print("The associated test file labels are: ") 
         print(file_labels)
         print("Created the new test features! Check folder test/output/ and observe the output features csv file!")
-    return
 
     if 'result' in targets:
         with open('config/input-params.json') as input_params, open('config/train-data-params.json') as data_params:
@@ -36,7 +35,6 @@ def main(targets):
         input_names, input_labels, input_df = input_feature_label(**input_cfg)
         final_result = ml_model_train(data_df, data_labels, input_df, input_labels)
         print(final_result)
-    return
 
     if 'analysis' in targets:
         with open('config/train-data-params.json') as data_params:

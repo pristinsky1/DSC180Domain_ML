@@ -60,12 +60,11 @@ def features_labels(filepath):
 
 # accesses the data file found within the data folder and creates the features and label for it
 # uses the big_byte_count_feature as a helper function
-def input_feature_label():
+def input_feature_label(filepath):
     Dir1_ByteCount_0to300_feature = []
     Dir2_ByteCount_1200to1500_feature = []
     labels = []
     file_names = []
-    filepath = "input_data"
     files = os.listdir(filepath)
     for file in files:
         if ('novpn' in file) or (file[:2] == '._'):
@@ -75,7 +74,7 @@ def input_feature_label():
         else:
             labels.append(1)
         file_names.append(file)
-        df = pd.read_csv('data/' + file)
+        df = pd.read_csv('input_data/' + file)
         sum_values = big_byte_count_feature(df)
         Dir1_ByteCount_0to300_feature.append(sum_values[0])
         Dir2_ByteCount_1200to1500_feature.append(sum_values[1])
@@ -84,7 +83,7 @@ def input_feature_label():
     return file_names, labels, feature_df
 
 #Trains, tests, and splits the data up so that RandomForestClassifier can be used 
-#to train on the data and then determine how accuracte the model is
+#to train on the data and then determine how accurate the model is
 def ml_model_analysis(X, y):
     model = RandomForestClassifier()
     X_tr, X_ts, y_tr, y_ts = train_test_split(X, y, test_size=0.25, random_state=42)

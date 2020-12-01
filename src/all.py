@@ -2,6 +2,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from sklearn import metrics
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
 
 def three_cols(row):
     time = list(map(int, row['packet_times'].split(';')[0:-1]))

@@ -74,7 +74,7 @@ def input_feature_label(filepath):
         else:
             labels.append(1)
         file_names.append(file)
-        df = pd.read_csv('input_data/' + file)
+        df = pd.read_csv(filepath + file)
         sum_values = big_byte_count_feature(df)
         Dir1_ByteCount_0to300_feature.append(sum_values[0])
         Dir2_ByteCount_1200to1500_feature.append(sum_values[1])
